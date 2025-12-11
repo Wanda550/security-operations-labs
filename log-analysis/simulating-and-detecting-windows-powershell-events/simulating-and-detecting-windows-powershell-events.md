@@ -53,7 +53,7 @@ To simulate a suspicious activity, open an elevated PowerShell(run as adminstrat
 Get-LocalUser | Select-Object Name, Enabled
 ```
 
-![PowerShell Command](img/powershell-command.png)
+![PowerShell Command](powershell-command.png)
 
 ## **Step 4: Detect the Log in Windows Event Viewer**
 
@@ -69,9 +69,9 @@ Look for an entry that shows the execution of the Get-LocalUser command.
 Take a screenshot of the event details.
 
 ## 📸 Screenshots
-![PowerShell Event Screenshot](img/powershell-event.png)
-![PowerShell Event Screenshot](img/powershell-event-screenshot.png)
-![PowerShell Event Screenshot](img/powershell-event-screenshot-detailed.png)
+![PowerShell Event Screenshot](powershell-event.png)
+![PowerShell Event Screenshot](powershell-event-screenshot.png)
+![PowerShell Event Screenshot](powershell-event-screenshot-detailed.png)
 
 ## Conclusion:
 
