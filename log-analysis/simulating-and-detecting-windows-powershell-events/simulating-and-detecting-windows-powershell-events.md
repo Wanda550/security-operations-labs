@@ -53,7 +53,7 @@ To simulate a suspicious activity, open an elevated PowerShell(run as adminstrat
 Get-LocalUser | Select-Object Name, Enabled
 ```
 
-![PowerShell Command](powershell-command.png)
+![PowerShell Command](../references/powershell-commands.png)
 
 ## **Step 4: Detect the Log in Windows Event Viewer**
 
@@ -69,9 +69,9 @@ Look for an entry that shows the execution of the Get-LocalUser command.
 Take a screenshot of the event details.
 
 ## 📸 Screenshots
-![PowerShell Event Screenshot](powershell-event.png)
-![PowerShell Event Screenshot](powershell-event-screenshot.png)
-![PowerShell Event Screenshot](powershell-event-screenshot-detailed.png)
+![PowerShell Event](../references/powershell-event.png)
+![PowerShell Event Screenshot](../references/powershell-event-screenshot.png)
+![PowerShell Event Detailed Screenshot](../references/powershell-event-screenshot-detailed.png)
 
 ## Conclusion:
 
@@ -82,4 +82,4 @@ This lab demonstrates:
 1. How PowerShell activity generates Event ID 4104 logs
 2. How SOC analysts use logging for threat detection
 3. How script block logging helps identify suspicious or malicious commands
-4. PowerShell logging is essential for detecting post-exploitation activity, lateral movement, and privilege 5escalation attempts
+4. PowerShell logging is essential for detecting post-exploitation activity, lateral movement, and privilege escalation attempts
