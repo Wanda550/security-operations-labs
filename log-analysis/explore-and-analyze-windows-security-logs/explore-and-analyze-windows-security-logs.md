@@ -21,7 +21,7 @@ Introduction to Windows Security Logs, how to analyze logs for security-related 
 
 Win + R → secpol.msc
 
-![Local Security Policy](../references/local-security-policy-audit-logon.png")
+![Local Security Policy](../../references/local-security-policy-audit-logon.png")
 
 Navigate to
    `Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies - Local Group Object -> then click on Logon`
@@ -83,13 +83,13 @@ Filter Current Log
 
 - Event ID 4625
 
-![Event Viewer Logon Success](../references/event-viewer-logon-failed.png)
-![Event Viewer Logon Success](../references/event-viewer-logon-failed-detailed.png)
+![Event Viewer Logon Success](../../references/event-viewer-logon-failed.png)
+![Event Viewer Logon Success](../../references/event-viewer-logon-failed-detailed.png)
 
 - Event ID 4624
 
-![Event Viewer Logon Success](../references/event-viewer-logon-success.png)
-![Event Viewer Logon Success](../references/event-viewer-logon-success-detailed.png)
+![Event Viewer Logon Success](../../references/event-viewer-logon-success.png)
+![Event Viewer Logon Success](../../references/event-viewer-logon-success-detailed.png)
 
 ## 🧠 Analysis
 
