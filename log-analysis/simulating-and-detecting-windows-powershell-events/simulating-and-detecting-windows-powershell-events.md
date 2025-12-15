@@ -55,7 +55,7 @@ To simulate a suspicious activity, open an elevated PowerShell(run as adminstrat
 Get-LocalUser | Select-Object Name, Enabled
 ```
 
-![PowerShell Command](../references/powershell-commands.png)
+![PowerShell Command](../../references/powershell-commands.png)
 
 ## **Step 4: Detect the Log in Windows Event Viewer**
 
@@ -97,9 +97,9 @@ Host machine details
 This visibility is critical because many modern attacks rely on PowerShell Living-Off-The-Land techniques (LOLBins) rather than dropping obvious malware files.
 
 ## 📸 Screenshots
-![PowerShell Event](../references/powershell-event.png)
-![PowerShell Event Screenshot](../references/powershell-event-screenshot.png)
-![PowerShell Event Detailed Screenshot](../references/powershell-event-screenshot-detailed.png)
+![PowerShell Event](../../references/powershell-event.png)
+![PowerShell Event Screenshot](../../references/powershell-event-screenshot.png)
+![PowerShell Event Detailed Screenshot](../../references/powershell-event-screenshot-detailed.png)
 
 ## Conclusion:
 
