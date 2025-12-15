@@ -8,9 +8,11 @@ Generating simple logs on a Windows systems and simulating how SOC Analysts(prof
 ## 🖥️ Requirements
 
 **Systems:**  
+
 - Windows 10/11 or Windows Server 2019/2022  
 
 **Tools:**  
+
 - Windows Event Viewer  
 - PowerShell (pre-installed)
 
@@ -67,6 +69,32 @@ Click Filter Current Log, and filter for Event ID 4104 (which logs PowerShell sc
 Look for an entry that shows the execution of the Get-LocalUser command.
 
 Take a screenshot of the event details.
+
+## 🧠 Analysis
+
+Once PowerShell logging is enabled, every executed script block is recorded under Event ID 4104 in the Microsoft-Windows-PowerShell/Operational log.
+
+In this lab, the executed command:
+
+Get-LocalUser | Select-Object Name, Enabled
+
+was successfully captured by Windows logging. This command enumerates local user accounts and their enabled or disabled status. While this action can be legitimate for system administration, it is also a common reconnaissance technique used by attackers after initial access.
+
+From a SOC analyst perspective:
+
+Enumerating local users is often one of the first post-compromise actions
+Attackers use this information to identify privileged or inactive accounts
+PowerShell-based enumeration is frequently abused because it blends in with normal administrative activity
+
+Event ID 4104 Visibility
+
+Event ID 4104 provides high-value forensic context, including:
+Full PowerShell script block content
+User account and security context
+Execution timestamp
+Host machine details
+
+This visibility is critical because many modern attacks rely on PowerShell Living-Off-The-Land techniques (LOLBins) rather than dropping obvious malware files.
 
 ## 📸 Screenshots
 ![PowerShell Event](../references/powershell-event.png)
