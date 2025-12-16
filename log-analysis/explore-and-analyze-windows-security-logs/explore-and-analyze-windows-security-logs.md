@@ -21,7 +21,7 @@ Introduction to Windows Security Logs, how to analyze logs for security-related 
 
 Win + R → secpol.msc
 
-![Local Security Policy](../../references/local-security-policy-audit-logon.png")
+![Local Security Policy](../../references/local-security-policy-audit-logon.png)
 
 Navigate to
    `Security Settings -> Advanced Audit Policy Configuration -> System Audit Policies - Local Group Object -> then click on Logon`

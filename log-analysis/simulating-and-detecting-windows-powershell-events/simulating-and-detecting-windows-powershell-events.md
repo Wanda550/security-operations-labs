@@ -22,16 +22,18 @@ Open Run (Win + R) and type:
 
 gpedit.msc and click to start.
 
-**first time users/gpedit cannot be found**
+If Group Policy Editor is unavailable (Windows Home edition), PowerShell logging can be enabled via the Windows Registry using official Microsoft-supported keys.
 
-1. Download gpedit-enabler.bat.
-2. Place file in a folder named gpedit(or related name).
-3. Right click on file adn run gpedit-enabler.bat as administrator.
-4. Allow download to complete and restart computer.
-5. Go to Run (Win + R) search gpedit.msc.
+```powershell 
+# Enable Script Block Logging
+New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" -Force
+Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" -Name EnableScriptBlockLogging -Value 1
 
-**Youtube Tutorial Demonstration by Tech Gene**
-https://www.youtube.com/watch?v=JfJ_Mr8X2MQ
+# Enable Module Logging
+New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging" -Force
+Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging" -Name EnableModuleLogging -Value 1
+New-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ModuleLogging" -Name ModuleNames -PropertyType Hashtable -Value @{"*"="*"} -Force
+```
 
 ## **Step 2: Enable Windows PowerShell Logging**
 
@@ -55,7 +57,7 @@ To simulate a suspicious activity, open an elevated PowerShell(run as adminstrat
 Get-LocalUser | Select-Object Name, Enabled
 ```
 
-![PowerShell Command](../../references/powershell-commands.png)
+![PowerShell Command](../../references/powershell-command.png)
 
 ## **Step 4: Detect the Log in Windows Event Viewer**
 
@@ -93,8 +95,6 @@ Full PowerShell script block content
 User account and security context
 Execution timestamp
 Host machine details
-
-This visibility is critical because many modern attacks rely on PowerShell Living-Off-The-Land techniques (LOLBins) rather than dropping obvious malware files.
 
 ## 📸 Screenshots
 ![PowerShell Event](../../references/powershell-event.png)
