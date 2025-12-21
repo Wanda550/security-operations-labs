@@ -120,5 +120,3 @@ sudo journalctl -u ssh -f
 - Multiple failures from a single IP is a strong signal of attack
 - Modern Ubuntu systems use systemd journal instead of traditional auth.log files
 - Brute force attacks can be mitigated using tools such as fail2ban, firewalls, and SIEM solutions like Wazuh
-
-

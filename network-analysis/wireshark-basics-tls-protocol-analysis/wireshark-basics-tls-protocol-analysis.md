@@ -1,38 +1,27 @@
-# Wireshark Basics – TLS Protocol Analysis
+# Introduction to Wireshark – Packet Analysis for SOC Analysts
 
 ## 🎯 Objective
 
-Learn how to capture and analyze **TLS-encrypted traffic** using Wireshark.  
-Understand TLS handshakes, certificate exchange, and encrypted application data for network monitoring and security analysis.
-
----
+Introduction to Wireshark. A powerful packet analysis tool used by SOC analysts to investigate network traffic. Learning the interface, how to capture packets, apply filters, and identify suspicious communication patterns.
 
 ## 🖥️ Requirements
 
 **Systems:**  
 
-- Windows 10/11, Linux, or macOS  
+- Operating System: Windows, Linux, or macOS
+- Network Adapter: Required for packet capture  
 
 **Tools:**  
 
 - [Wireshark](https://www.wireshark.org/) (latest stable version)
-- Web browser or TLS-enabled client for generating traffic
 
----
+## 📘 **What is Wireshark?**
 
-## 🔧 Step 1: Capture TLS Traffic
+**Wireshark** is an open-source network protocol analyzer that lets you capture and interactively browse network traffic. It allows analysts to view data packets flowing in and out of a system in real time or from saved PCAP files.
 
-1. Open Wireshark.
-2. Select your **network interface** (Wi-Fi or Ethernet).
-3. Start the capture.
-4. Open a web browser and navigate to a secure website (e.g., `https://example.com`).
-5. Stop the capture after a few seconds.
+## 🛡️ **Wireshark Use Cases for SOC Analysts**
 
----
-
-## 🔧 Step 2: Filter TLS Traffic
-
-Use the display filter:
-
-```text
-tls
+- 🔍 **Incident Investigation:** Analyze malicious traffic patterns (e.g., C2 communication, lateral movement)
+- 🕵️ **Malware Analysis:** Extract indicators like domains, IPs, and payloads from suspicious network behavior
+- 🚨 **Threat Hunting:** Detect anomalies like DNS tunneling, beaconing, or unauthorized FTP/SSH usage
+- 🛠️ **Protocol Troubleshooting:** Identify service failures, misconfigurations, or latency issues
