@@ -8,15 +8,14 @@ A lab to understand the **core steps of incident response** by investigating a *
 
 **Incident Response (IR)** is the process of detecting and managing a cybersecurity incident to minimize impact and restore normal operations. This lab introduces a basic Linux scenario where an attacker’s script is executed through user error or misconfiguration.
 
----
-
 ## 🔁 **Incident Response Process (NIST SP 800-61 Rev. 2)**
 
-| **Phase**                         | **Description** |----------------------------------|---------------------------------------------------------------------------------|
+| **Phase**                         | **Description**                                                                 |
+|----------------------------------|---------------------------------------------------------------------------------|
 | **1. Preparation**               | Ensure logging is enabled, tools are installed, and the system is ready.        |
 | **2. Detection and Analysis**    | Identify suspicious activity using logs, running processes, and file checks.    |
 | **3. Containment, Eradication, and Recovery** | Isolate the threat, remove the script, and secure the system.                    |
-| **4. Post-Incident Activity**    | Document the incident and implement preventio steps.                          |
+| **4. Post-Incident Activity**    | Document the incident and implement prevention steps.                          |                        |
 
 ## ⚠️ Ethical Notice
 
